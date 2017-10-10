@@ -4,6 +4,21 @@
 #define L 3
 #define C 10
 
+void f(int **m)
+{
+	int i, j;
+	for (i = 0 ; i < L; ++i)
+	{
+		for (j = 0 ; j < C; ++j)	
+		{
+			printf("%d ", m[i][j]);
+			// printf("%d ", *(*(m+i) + j) );
+		}
+		printf("\n");
+	}	
+
+}
+
 
 int main()
 {	
@@ -25,16 +40,7 @@ int main()
 		}
 	}	
 
-
-	for (i = 0 ; i < L; ++i)
-	{
-		for (j = 0 ; j < C; ++j)	
-		{
-			printf("%d ", a[i][j]);
-		}
-		printf("\n");
-	}	
-	
+	f(a);
 
 
 	// for (i =0 ; i < n; ++i)
